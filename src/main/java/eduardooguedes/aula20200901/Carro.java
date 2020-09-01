@@ -7,13 +7,16 @@ public class Carro {
     private double capacidadeTanqueLitros = 0.0;
 
     public Carro(double capacidadeTanqueLitros) {
+        if(capacidadeTanqueLitros < 4.0)
+        {
+            throw new RuntimeException("Capacidade de tanque insuficiente.");
+        }
         this.capacidadeTanqueLitros = capacidadeTanqueLitros;
     }
 
     public void abastecer (double volumeAbastecidoEmLitros
     ){
-        if(volumeAbastecidoEmLitros
-         + combustivelNoTanqueLitros > capacidadeTanqueLitros)
+        if(volumeAbastecidoEmLitros + combustivelNoTanqueLitros > capacidadeTanqueLitros)
         {
             throw new RuntimeException(
                 "O tanque só comporta "
@@ -22,6 +25,12 @@ public class Carro {
                 + (volumeAbastecidoEmLitros + combustivelNoTanqueLitros)
                 + " litros.");            
             }
+            else
+               if(volumeAbastecidoEmLitros <= 0.0)
+               {
+                   throw new RuntimeException("Abastecimento nulo não valido!");
+               } 
+            
             combustivelNoTanqueLitros += volumeAbastecidoEmLitros;
             System.out.println("Abastecendo " + volumeAbastecidoEmLitros + " litros.");
     }
