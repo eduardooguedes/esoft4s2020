@@ -1,15 +1,17 @@
-package aula20200903;
+package eduardooguedes.aula20200903;
+
+import eduardooguedes.aula20200903.ValueObjects.*;
 
 public abstract class Pessoa {
     
     private Nome nome;
     
-    public abstract void setNome(Nome novoNome){
-        nome = novoNome;  
+    public void setNome(Nome novoNome) {
+        this.nome = novoNome;  
     }
 
     public Nome getNome(){
-        return nome.getValor();
+        return this.nome;
     }
 
 

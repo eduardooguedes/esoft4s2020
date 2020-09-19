@@ -1,10 +1,11 @@
-package aula20200903;
+package eduardooguedes.aula20200903;
 
-import aula20200903.ValueObjects.Nome;
+import eduardooguedes.aula20200903.ValueObjects.*;
 
 public class Juridica extends Pessoa {
 
     private Cnpj cnpj;
+    private Nome nome;
     private NomeFantasia nomeFantasia;
 
     public Juridica(Nome nome, Cnpj cnpj, NomeFantasia nomeFantasia){
@@ -13,6 +14,9 @@ public class Juridica extends Pessoa {
         this.nomeFantasia = nomeFantasia;
     }
 
+    @Override
+    public void setNome(){
 
+    }
 
 }

@@ -1,3 +1,5 @@
+package eduardooguedes.aula20200903.ValueObjects;
+
 public class Cpf {
     
     private String valor;
@@ -8,17 +10,17 @@ public class Cpf {
         }
         else
         {
-            throw new RunTimeException("CPF inválido!");
+            throw new RuntimeException("CPF inválido!");
         }     
     }
 
     private boolean validarCpf(String valor){
         
-        if(valor.length != 11){
+        if(valor.length() != 11){
             return false;
         }        
 
-        String[] number = valor.split();
+        String[] number = valor.getChars(srcBegin, srcEnd, dst, dstBegin);;
         int cont, calc, x=10;
         for(cont = 0; cont < 10; cont++){
             calc += Integer.parseInt(number[cont]) * x;
@@ -41,6 +43,4 @@ public class Cpf {
         }
         return false;
     }
-
-
 }

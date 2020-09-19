@@ -1,11 +1,11 @@
-package aula20200903;
+package eduardooguedes.aula20200903.ValueObjects;
 
 public class Nome {
     private String valor;
 
     public Nome(String valor){
-        if(null == valor || valor.trim().Split(' ').length < 2 || valor.trim().length == 0){
-            throw new RunTimeException("O nome deve possuir duas palavras!");
+        if(null == valor || valor.trim().split(' ').length() < 2 || valor.trim().length() == 0){
+            throw new RuntimeException("O nome deve possuir duas palavras!");
         }
         this.valor = valor;
     }
