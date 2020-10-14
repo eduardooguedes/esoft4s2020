@@ -1,0 +1,4 @@
+Até o momento criei dois values objects: Telefone e Email.
+Achei interessante criar esses dois por ser importante validá-los.
+Na classe email, validei se os caracteres "@" e "." estão presentes no e-mail, além de verificar se existe a palavra "com" ao final.
+Na classe Telefone, validei se são apenas números que estão sendo inseridos e separei em dois atributos: ddd e telefone.

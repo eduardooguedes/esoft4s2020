@@ -6,6 +6,11 @@ public class Telefone {
     private String telefone;
 
 	public Telefone(String valor) {
+        
+        if(!valor.matches("[0-9]")){
+            throw new RuntimeException("Somente permitidos números.");    
+        }
+        
         this.ddd = valor.substring(0, 2);
         this.telefone = valor.substring(2);
     }

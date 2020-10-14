@@ -1,7 +1,7 @@
 package eduardooguedes4sem2bim.aula20201013;
 
 import eduardooguedes4sem2bim.aula20201013.ValueObject.*;
-
+    
 public abstract class Pessoa {
     
     private String nomePessoa;
